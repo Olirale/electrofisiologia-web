@@ -1,20 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import '../styles/index.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Importación de datos desde los JSON
+import noticias from '../data/noticias.json';
+import casos from '../data/casos.json';
+import videos from '../data/videos.json';
+import equipo from '../data/equipo.json';
+
+// Lógica de visualización para la Home
+const noticiaDestacada = noticias[0];
+const restoNoticias = noticias.slice(1, 3);
+const casosHome = casos.slice(0, 6);
+const videosHome = videos.slice(0, 4);
 ---
 
 <Layout title="Unidad de Electrofisiología · CHUAC">
+
 	<section class="hero">
 		<div class="hero-content">
 			<div class="hero-eyebrow">Complejo Hospitalario Universitario de A Coruña</div>
 			<h1 class="hero-title">Unidad de<br/>Electrofisiología</h1>
-			<p class="hero-sub">Diagnóstico y tratamiento de las arritmias cardíacas. Innovación, excelencia clínica y compromiso con el paciente.</p>
+			<p class="hero-sub">Líderes en el tratamiento de arritmias complejas, combinando tecnología de vanguardia con un enfoque humano y docente.</p>
 			<div class="hero-cta">
-				<a href="#casos" class="btn-primary">Ver Casos Clínicos</a>
-				<a href="#equipo" class="btn-outline">Nuestro Equipo</a>
+				<a href="#casos" class="btn-primary">Casos Clínicos</a>
+				<a href="#contacto" class="btn-outline">Contactar</a>
 			</div>
 		</div>
 	</section>
@@ -22,41 +32,58 @@ import Layout from '../layouts/Layout.astro';
 	<section id="noticias" class="container">
 		<div class="section-header">
 			<span class="section-eyebrow">Actualidad</span>
-			<h2 class="section-title">Noticias del Servicio</h2>
+			<h2 class="section-title">Últimas Noticias</h2>
 			<div class="gold-line"></div>
 		</div>
 
-		<div class="news-grid">
-			{noticias.map(item => (
-				<article class={item.destacada ? "news-featured" : "news-card"}>
-					{item.destacada && <div class="media-placeholder"><span>▶ Reproducir Vídeo</span></div>}
-					{!item.destacada && <div class="news-card-img">{item.icono}</div>}
-					<div class="news-body">
-						<span class="tag">{item.tipo}</span>
-						<h3>{item.titulo}</h3>
-						<p>{item.resumen}</p>
-						<div class="meta">📅 {item.fecha} {item.lugar && `· 🏥 ${item.lugar}`}</div>
-					</div>
-				</article>
-			))}
+		<div class="news-layout">
+			<article class="news-featured">
+				<div class="video-placeholder">
+					<div class="play-button">▶</div>
+					<span>Reproducir vídeo institucional</span>
+				</div>
+				<div class="news-body">
+					<span class="tag">{noticiaDestacada.tipo}</span>
+					<h3>{noticiaDestacada.titulo}</h3>
+					<p>{noticiaDestacada.resumen}</p>
+					<div class="meta">📅 {noticiaDestacada.fecha} {noticiaDestacada.lugar && `· 🏥 ${noticiaDestacada.lugar}`}</div>
+				</div>
+			</article>
+
+			<div class="news-sidebar">
+				{restoNoticias.map(noticia => (
+					<article class="news-card-mini">
+						<div class="news-mini-icon">{noticia.icono}</div>
+						<div class="news-mini-content">
+							<span class="tag-sm">{noticia.tipo}</span>
+							<h4>{noticia.titulo}</h4>
+							<p>{noticia.resumen}</p>
+							<span class="meta-sm">{noticia.fecha}</span>
+						</div>
+					</article>
+				))}
+			</div>
 		</div>
-		<a href="/noticias" class="view-all">Ver todas las noticias →</a>
+
+		<div class="center-link">
+			<a href="/noticias" class="view-all">Ver todas las noticias →</a>
+		</div>
 	</section>
 
 	<section id="casos" class="bg-offwhite">
 		<div class="container">
 			<div class="section-header">
-				<span class="section-eyebrow">Actividad Clínica</span>
-				<h2 class="section-title">Casos Clínicos</h2>
+				<span class="section-eyebrow">Área Docente</span>
+				<h2 class="section-title">Casos Clínicos Recientes</h2>
 				<div class="gold-line"></div>
 			</div>
 
-			<div class="casos-grid">
-				{casos.map(caso => (
-					<div class="caso-card">
+			<section class="casos-grid">
+				{casosHome.map(caso => (
+					<article class="caso-card">
 						<div class="caso-header">
 							<span class="caso-icon">{caso.icono}</span>
-							<span class="caso-number">{caso.id.toString().padStart(2, '0')}</span>
+							<span class="caso-number">#{caso.id}</span>
 						</div>
 						<div class="caso-body">
 							<span class="caso-type">{caso.tipo}</span>
@@ -64,32 +91,38 @@ import Layout from '../layouts/Layout.astro';
 							<p>{caso.resumen}</p>
 						</div>
 						<div class="caso-footer">
-							<span>{caso.fecha}</span>
-							<button class="btn-text">Ver caso</button>
+							<a href={`/casos/${caso.id}`} class="btn-text">Ver detalles del caso</a>
 						</div>
-					</div>
+					</article>
 				))}
+			</section>
+			<div class="center-link">
+				<a href="/casos" class="view-all">Explorar repositorio completo →</a>
 			</div>
-			<a href="/casos" class="view-all">Ver todos los casos →</a>
 		</div>
 	</section>
 
 	<section id="videos" class="bg-navy">
 		<div class="container">
 			<div class="section-header invert">
-				<span class="section-eyebrow">Información para pacientes</span>
-				<h2 class="section-title">Vídeos explicativos</h2>
+				<span class="section-eyebrow">Pacientes</span>
+				<h2 class="section-title">Aula Virtual</h2>
 				<div class="gold-line"></div>
 			</div>
 
 			<div class="videos-grid">
-				{videos.map(video => (
+				{videosHome.map(video => (
 					<div class="video-card">
 						<div class="video-thumb">
-							<div class="play-icon">▶</div>
-							<span class="duration">{video.duracion}</span>
+							<iframe
+								src={video.url}
+								title={video.titulo}
+								loading="lazy"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+							</iframe>
 						</div>
-						<div class="video-body">
+						<div class="video-info">
 							<span class="tag-video">{video.tipo}</span>
 							<h4>{video.titulo}</h4>
 							<p>{video.resumen}</p>
@@ -102,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<section id="equipo" class="container">
 		<div class="section-header">
-			<span class="section-eyebrow">Quiénes somos</span>
+			<span class="section-eyebrow">Profesionales</span>
 			<h2 class="section-title">Nuestro Equipo</h2>
 			<div class="gold-line"></div>
 		</div>
@@ -110,30 +143,52 @@ import Layout from '../layouts/Layout.astro';
 		<div class="team-grid">
 			{equipo.map(persona => (
 				<div class="team-card">
-					<div class="team-avatar">{persona.inicial}</div>
-					<h3>{persona.nombre}</h3>
-					<span class="role">{persona.puesto}</span>
-					<p>{persona.resumen}</p>
+					<div class="team-placeholder">{persona.nombre.charAt(0)}</div>
+					<div class="team-info">
+						<h3>{persona.nombre}</h3>
+						<span class="role">{persona.puesto}</span>
+						<p>{persona.resumen}</p>
+					</div>
 				</div>
 			))}
 		</div>
 	</section>
 
-	<section id="contacto" class="bg-offwhite contact-split">
-		<div class="container split-grid">
-			<div class="info">
-				<h2 class="section-title">Cómo llegar</h2>
+	<section id="contacto" class="bg-offwhite">
+		<div class="container contact-wrapper">
+			<div class="contact-info">
+				<h2 class="section-title">Contacto</h2>
 				<div class="gold-line"></div>
-				<p>As Xubias de Arriba, 84 · 15006 A Coruña</p>
-				<p>📞 981 17 80 00</p>
+				<p>Estamos situados en el Complejo Hospitalario Universitario de A Coruña (CHUAC).</p>
+
+				<div class="contact-details">
+					<div class="detail-item">
+						<strong>📍 Ubicación Física</strong>
+						<p>As Xubias de Arriba, 84, 15006 A Coruña<br/>Planta 2 - Área de Cardiología</p>
+					</div>
+					<div class="detail-item">
+						<strong>📞 Centralita Hospital</strong>
+						<p>981 17 80 00</p>
+					</div>
+				</div>
 			</div>
-			<form class="contact-form">
-				<h3>¿Alguna consulta?</h3>
-				<input type="text" placeholder="Nombre" />
-				<input type="email" placeholder="Email" />
-				<textarea placeholder="Mensaje"></textarea>
-				<button type="submit" class="btn-primary">Enviar</button>
+
+			<form class="contact-form" action="#" method="POST">
+				<div class="form-group">
+					<label for="name">Nombre</label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div class="form-group">
+					<label for="email">Correo Electrónico</label>
+					<input type="email" id="email" name="email" required />
+				</div>
+				<div class="form-group">
+					<label for="message">Mensaje</label>
+					<textarea id="message" name="message" rows="4"></textarea>
+				</div>
+				<button type="submit" class="btn-primary">Enviar consulta</button>
 			</form>
 		</div>
 	</section>
+
 </Layout>

@@ -1,0 +1,270 @@
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--ocean) 100%);
+    color: white;
+    padding: 10rem 2rem 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-eyebrow {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-sub {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+/* SECTION HEADERS */
+.section-header { margin-bottom: 3rem; }
+.section-header.invert h2 { color: white; }
+.section-eyebrow {
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* GRID DE NOTICIAS */
+.news-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+}
+
+.news-featured {
+    background: var(--off-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.video-placeholder {
+    background: #000;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.play-button {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.news-featured:hover .play-button {
+    transform: scale(1.1);
+}
+
+.news-body { padding: 2.5rem; }
+.tag {
+    background: var(--sky);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.news-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.news-card-mini {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.news-mini-icon {
+    font-size: 1.5rem;
+    background: var(--off-white);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.news-mini-content h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.meta-sm { font-size: 0.85rem; color: var(--gray); display: block; margin-top: 0.5rem; }
+
+/* GRID DE CASOS */
+.casos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.caso-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.caso-card:hover { transform: translateY(-5px); }
+
+.caso-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.caso-icon { font-size: 1.8rem; }
+.caso-number { font-weight: 700; color: #f0f0f0; font-size: 1.5rem; }
+.caso-type { font-size: 0.85rem; color: var(--sky); font-weight: 600; display: block; margin-bottom: 0.5rem; }
+
+.btn-text {
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+.btn-text:hover { color: var(--accent); }
+
+/* VIDEOS PARA PACIENTES */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+
+.video-card:hover { background: rgba(255,255,255,0.1); }
+
+.video-thumb iframe { width: 100%; aspect-ratio: 16/9; }
+.video-info { padding: 1.5rem; }
+.video-info h4 { color: white; margin: 0.5rem 0; font-size: 1.1rem; }
+.tag-video { color: var(--accent); font-size: 0.75rem; font-weight: 600; }
+
+/* EQUIPO */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.team-card { text-align: center; }
+.team-placeholder {
+    width: 120px;
+    height: 120px;
+    background: var(--off-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display';
+    color: var(--navy);
+    margin: 0 auto 1.5rem;
+    border: 2px solid var(--accent);
+}
+
+.role {
+    display: block;
+    color: var(--sky);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* CONTACTO */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.contact-details { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.detail-item strong { display: block; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.2rem; }
+
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--sky);
+}
+
+.center-link { text-align: center; margin-top: 4rem; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .news-layout, .contact-wrapper { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.8rem; }
+    .contact-wrapper { gap: 3rem; }
+}
