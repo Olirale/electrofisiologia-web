@@ -1,5 +1,5 @@
 ---
-id: 1
+numero: 1
 title: "Ablación de fibrilación auricular persistente"
 resumen: "Paciente de 58 años con FA persistente sintomática refractaria a tratamiento antiarrítmico. Ablación circumferencial con catéter irrigado guiada por electrograma."
 fecha: "Enero 2025"

@@ -1,5 +1,5 @@
 ---
-id: 2
+numero: 2
 title: "DAI subcutáneo en miocardiopatía no isquémica"
 resumen: "Varón de 42 años con MCiD, FE 35%, episodios de TVNS documentados. Decisión de implante de S-ICD tras descarte de indicación de TRC."
 fecha: "Diciembre 2024"

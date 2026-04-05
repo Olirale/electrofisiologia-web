@@ -1,5 +1,5 @@
 ---
-id: 6
+numero: 6
 title: "Marcapasos sin cable Micra AV"
 resumen: "Paciente de 82 años con BAV completo y venas ocluidas. Implante exitoso de Micra AV vía femoral con estimulación bicameral."
 fecha: "Agosto 2024"

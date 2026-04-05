@@ -1,0 +1,56 @@
+---
+import Layout from './Layout.astro';
+import '../styles/noticias.css';
+import '../styles/noticia.css';
+
+const { frontmatter } = Astro.props;
+
+// Formatear la fecha
+const fechaFormateada = new Date(frontmatter.fecha).toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+
+// Construimos la base de la URL para GitHub Pages
+const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
+---
+
+<Layout title={`${frontmatter.title} | Casos Clínicos`}>
+    <article class="post-container">
+        <header class="post-hero">
+            <div class="post-meta-top">
+                {frontmatter.icono && <span class="case-icon">{frontmatter.icono}</span>}
+                <span class="post-tag">{frontmatter.tipo}</span>
+                <time datetime={frontmatter.fecha}>{fechaFormateada}</time>
+            </div>
+
+            <h1 class="post-title">{frontmatter.title}</h1>
+
+            {frontmatter.resumen && (
+                    <p class="post-excerpt">{frontmatter.resumen}</p>
+            )}
+
+            {frontmatter.lugar && (
+                    <div class="post-location">
+                        <span>📍 {frontmatter.lugar}</span>
+                    </div>
+            )}
+
+            <div class="post-divider"></div>
+        </header>
+
+        <div class="post-content-wrapper">
+            <div class="post-content">
+                <slot />
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <a href={`${baseUrl}/casos`} class="btn-back">
+                <span class="icon">←</span> Volver a casos clínicos
+            </a>
+        </footer>
+    </article>
+</Layout>
+

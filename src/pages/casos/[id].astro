@@ -1,0 +1,22 @@
+---
+// src/pages/casos/[id].astro
+import { getCollection, render } from 'astro:content';
+import CasoLayout from '../../layouts/CaseLayout.astro';
+
+export async function getStaticPaths() {
+    const cases = await getCollection('casos');
+
+    return cases.map(entry => ({
+        // 'entry.id' es el nombre del archivo (ej: 'caso-1', 'ablacion-fa')
+        params: { id: entry.id },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<CasoLayout frontmatter={entry.data}>
+    <Content />
+</CasoLayout>

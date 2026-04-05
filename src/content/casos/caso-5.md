@@ -1,5 +1,5 @@
 ---
-id: 5
+numero: 5
 title: "Ablación TV post-infarto con mapeo 3D"
 resumen: "Varón de 71 años con cardiopatía isquémica y TV monomorfa sostenida. Estudio con sistema de mapeo 3D de alta densidad y ablación del sustrato."
 fecha: "Septiembre 2024"

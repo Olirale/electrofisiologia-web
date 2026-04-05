@@ -1,5 +1,5 @@
 ---
-id: 3
+numero: 3
 title: "Ablación de Flutter auricular típico"
 resumen: "Mujer de 67 años con flutter auricular típico persistente. Ablación exitosa con bloqueo bidireccional del ICT comprobado por maniobra de encarrilamiento."
 fecha: "Noviembre 2024"

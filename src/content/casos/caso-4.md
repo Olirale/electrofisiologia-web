@@ -1,5 +1,5 @@
 ---
-id: 4
+numero: 4
 title: "Terapia de resincronización cardiaca (TRC-D)"
 resumen: "Paciente con IC crónica, FE 25%, BRIHH de 158 ms. Implante de TRC-D con catéter de VD y electrodo de VI por seno coronario."
 fecha: "Octubre 2024"
