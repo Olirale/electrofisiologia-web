@@ -1,49 +1,40 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-// Reutilizamos los estilos para que la web sea coherente
-import '../../styles/casos.css'
 import '../../styles/noticias.css';
-import '../../styles/noticia.css';
+import '../../styles/casos.css';
 
-// 1. Obtener todos los casos y ordenarlos por el campo 'numero' (opcional)
 const cases = await getCollection('casos');
+// Ordenamos por el campo 'numero' que añadimos antes
 const casesOrdenados = cases.sort((a, b) => b.data.numero - a.data.numero);
 
-// 2. Preparar la URL base para los enlaces
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-const title = "Casos Clínicos | Unidad de Electrofisiología";
-
 ---
 
-<Layout title={title}>
+<Layout title="Casos Clínicos | Unidad de Electrofisiología">
     <section class="news-hero">
         <div class="container">
             <span class="section-badge">Formación Médica</span>
             <h1 class="section-title">Casos <span>Clínicos</span></h1>
             <p class="section-description">
-                Análisis detallados de procedimientos electrofisiológicos reales,
-                técnicas de mapeo y resolución de complicaciones.
+                Análisis detallados de procedimientos electrofisiológicos reales.
             </p>
         </div>
     </section>
 
     <section class="news-grid-section">
         <div class="container">
-            <div class="news-grid">
+            <div class="news-grid-archive">
                 {casesOrdenados.map((caso) => (
-                        <article class="news-card">
+                        <article class="news-card-archive">
                             <div class="news-card-content">
-                                <div class="news-card-meta">
-                                    <span class="news-card-icon">{caso.data.icono || '🩺'}</span>
+                                <div>
+                                    <span class="news-card-img">{caso.data.icono || '🩺'}</span>
                                     <span class="news-tag">{caso.data.tipo}</span>
                                 </div>
 
                                 <h2 class="news-card-title">
-                                    <a href={`${base}/casos/${caso.id}`}>
                                         {caso.data.title}
-                                    </a>
                                 </h2>
 
                                 <p class="news-card-excerpt">
@@ -51,13 +42,13 @@ const title = "Casos Clínicos | Unidad de Electrofisiología";
                                 </p>
 
                                 <div class="news-card-footer">
-                                <span class="news-card-date">
-                                    {new Date(caso.data.fecha).toLocaleDateString('es-ES', {
-                                        month: 'long',
-                                        year: 'numeric'
-                                    })}
-                                </span>
-                                    <a href={`${base}/casos/${caso.id}`} class="read-more">
+                                    <span class="meta-sm">
+                                        {new Date(caso.data.fecha).toLocaleDateString('es-ES', {
+                                            month: 'long',
+                                            year: 'numeric'
+                                        })}
+                                    </span>
+                                    <a href={`${base}/casos/${caso.id}`} class="btn-text">
                                         Ver caso completo →
                                     </a>
                                 </div>
@@ -65,12 +56,6 @@ const title = "Casos Clínicos | Unidad de Electrofisiología";
                         </article>
                 ))}
             </div>
-
-            {casesOrdenados.length === 0 && (
-                    <div class="no-results">
-                        <p>Próximamente publicaremos nuevos casos clínicos.</p>
-                    </div>
-            )}
         </div>
     </section>
 </Layout>
