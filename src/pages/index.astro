@@ -6,6 +6,134 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Unidad de Electrofisiología · CHUAC">
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-eyebrow">Complejo Hospitalario Universitario de A Coruña</div>
+			<h1 class="hero-title">Unidad de<br/>Electrofisiología</h1>
+			<p class="hero-sub">Diagnóstico y tratamiento de las arritmias cardíacas. Innovación, excelencia clínica y compromiso con el paciente.</p>
+			<div class="hero-cta">
+				<a href="#casos" class="btn-primary">Ver Casos Clínicos</a>
+				<a href="#equipo" class="btn-outline">Nuestro Equipo</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="noticias" class="container">
+		<div class="section-header">
+			<span class="section-eyebrow">Actualidad</span>
+			<h2 class="section-title">Noticias del Servicio</h2>
+			<div class="gold-line"></div>
+		</div>
+
+		<div class="news-grid">
+			{noticias.map(item => (
+				<article class={item.destacada ? "news-featured" : "news-card"}>
+					{item.destacada && <div class="media-placeholder"><span>▶ Reproducir Vídeo</span></div>}
+					{!item.destacada && <div class="news-card-img">{item.icono}</div>}
+					<div class="news-body">
+						<span class="tag">{item.tipo}</span>
+						<h3>{item.titulo}</h3>
+						<p>{item.resumen}</p>
+						<div class="meta">📅 {item.fecha} {item.lugar && `· 🏥 ${item.lugar}`}</div>
+					</div>
+				</article>
+			))}
+		</div>
+		<a href="/noticias" class="view-all">Ver todas las noticias →</a>
+	</section>
+
+	<section id="casos" class="bg-offwhite">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-eyebrow">Actividad Clínica</span>
+				<h2 class="section-title">Casos Clínicos</h2>
+				<div class="gold-line"></div>
+			</div>
+
+			<div class="casos-grid">
+				{casos.map(caso => (
+					<div class="caso-card">
+						<div class="caso-header">
+							<span class="caso-icon">{caso.icono}</span>
+							<span class="caso-number">{caso.id.toString().padStart(2, '0')}</span>
+						</div>
+						<div class="caso-body">
+							<span class="caso-type">{caso.tipo}</span>
+							<h3>{caso.titulo}</h3>
+							<p>{caso.resumen}</p>
+						</div>
+						<div class="caso-footer">
+							<span>{caso.fecha}</span>
+							<button class="btn-text">Ver caso</button>
+						</div>
+					</div>
+				))}
+			</div>
+			<a href="/casos" class="view-all">Ver todos los casos →</a>
+		</div>
+	</section>
+
+	<section id="videos" class="bg-navy">
+		<div class="container">
+			<div class="section-header invert">
+				<span class="section-eyebrow">Información para pacientes</span>
+				<h2 class="section-title">Vídeos explicativos</h2>
+				<div class="gold-line"></div>
+			</div>
+
+			<div class="videos-grid">
+				{videos.map(video => (
+					<div class="video-card">
+						<div class="video-thumb">
+							<div class="play-icon">▶</div>
+							<span class="duration">{video.duracion}</span>
+						</div>
+						<div class="video-body">
+							<span class="tag-video">{video.tipo}</span>
+							<h4>{video.titulo}</h4>
+							<p>{video.resumen}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section id="equipo" class="container">
+		<div class="section-header">
+			<span class="section-eyebrow">Quiénes somos</span>
+			<h2 class="section-title">Nuestro Equipo</h2>
+			<div class="gold-line"></div>
+		</div>
+
+		<div class="team-grid">
+			{equipo.map(persona => (
+				<div class="team-card">
+					<div class="team-avatar">{persona.inicial}</div>
+					<h3>{persona.nombre}</h3>
+					<span class="role">{persona.puesto}</span>
+					<p>{persona.resumen}</p>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<section id="contacto" class="bg-offwhite contact-split">
+		<div class="container split-grid">
+			<div class="info">
+				<h2 class="section-title">Cómo llegar</h2>
+				<div class="gold-line"></div>
+				<p>As Xubias de Arriba, 84 · 15006 A Coruña</p>
+				<p>📞 981 17 80 00</p>
+			</div>
+			<form class="contact-form">
+				<h3>¿Alguna consulta?</h3>
+				<input type="text" placeholder="Nombre" />
+				<input type="email" placeholder="Email" />
+				<textarea placeholder="Mensaje"></textarea>
+				<button type="submit" class="btn-primary">Enviar</button>
+			</form>
+		</div>
+	</section>
 </Layout>
