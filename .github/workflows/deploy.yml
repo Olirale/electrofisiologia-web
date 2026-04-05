@@ -13,11 +13,17 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Esto quita el aviso de Node 20
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+
+      # --- NUEVO PASO: INSTALAR NODE 24 ---
+      - name: Install Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # ------------------------------------
+
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 
