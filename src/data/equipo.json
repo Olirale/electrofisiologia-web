@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Dr/a. Apellido A",
+    "puesto": "Jefe de Unidad",
+    "resumen": "Especialista en ablación de arritmias complejas y estimulación cardiaca avanzada. Más de 20 años de experiencia.",
+    "imagen": "/img/equipo/jefe-unidad.jpg"
+  },
+  {
+    "nombre": "Dr/a. Apellido B",
+    "puesto": "Facultativo Especialista",
+    "resumen": "Experto en ablación de FA y taquicardias supraventriculares. Miembro de grupos de trabajo de la SEC.",
+    "imagen": "/img/equipo/especialista-1.jpg"
+  },
+  {
+    "nombre": "Dr/a. Apellido C",
+    "puesto": "Facultativo Especialista",
+    "resumen": "Dedicación especial al implante de dispositivos y terapia de resincronización cardiaca.",
+    "imagen": "/img/equipo/especialista-2.jpg"
+  },
+  {
+    "nombre": "Dr/a. Apellido D",
+    "puesto": "Residente EFI",
+    "resumen": "En formación especializada en electrofisiología. Investigación en ablación de TV en cardiopatía estructural.",
+    "imagen": "/img/equipo/residente.jpg"
+  }
+]
