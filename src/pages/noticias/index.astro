@@ -10,6 +10,8 @@ const posts = await getCollection('noticias');
 const sortedPosts = posts.sort((a, b) =>
     new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
 );
+
+const fechaOpciones = { day: '2-digit', month: 'long', year: 'numeric' };
 ---
 
 <Layout title="Archivo de Noticias · Unidad de Electrofisiología">
@@ -32,7 +34,7 @@ const sortedPosts = posts.sort((a, b) =>
                                 <h2>{post.data.title}</h2>
                                 <p>{post.data.resumen}</p>
                                 <div class="news-card-footer">
-                                    <span class="meta-sm">📅 {post.data.fecha}</span>
+                                    <span class="meta-sm">📅 {post.data.fecha.toLocaleDateString('es-ES', fechaOpciones)}</span>
                                     <span class="btn-text">Leer más</span>
                                 </div>
                             </div>
