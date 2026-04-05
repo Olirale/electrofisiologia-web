@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: "Resultados del registro multicéntrico de TV en cardiopatía isquémica"
 resumen: "Participamos como centro colaborador en el registro nacional sobre taquicardia ventricular en pacientes con cardiopatía isquémica."
 fecha: "2025-03-05"
-lugar: null
+lugar: ""
 tipo: "Publicación"
 icono: "📊"
 ---

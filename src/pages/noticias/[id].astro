@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+// 1. Generar las rutas para cada noticia
+export async function getStaticPaths() {
+    const posts = await getCollection('noticias');
+    return posts.map(post => ({
+        params: { id: post.id },
+        props: { post },
+    }));
+}
+
+// 2. Obtener la noticia de las props
+const { post } = Astro.props;
+
+// 3. Renderizar el contenido del Markdown (el cuerpo del texto)
+const { Content } = await render(post);
+---
+
+<PostLayout frontmatter={post.data}>
+    <Content />
+</PostLayout>

@@ -21,6 +21,7 @@
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    color: white;
     font-family: 'Playfair Display', serif;
 }
 
@@ -265,6 +266,6 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .news-layout, .contact-wrapper { grid-template-columns: 1fr; }
-    .hero-title { font-size: 2.8rem; }
+    .hero-title { font-size: 2.8rem; color: white; }
     .contact-wrapper { gap: 3rem; }
 }

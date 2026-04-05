@@ -2,15 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/index.css';
 
+import { getCollection } from 'astro:content';
+import { glob, file } from 'astro/loaders';
+
+const posts = await getCollection('noticias');
+
+const sortedPosts = posts.sort((a, b) =>
+	new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
+);
+
+const noticiaDestacada = posts[0];
+const restoNoticias = posts.slice(1, 3);
+
+
 // Importación de datos desde los JSON
-import noticias from '../data/noticias.json';
 import casos from '../data/casos.json';
 import videos from '../data/videos.json';
 import equipo from '../data/equipo.json';
 
 // Lógica de visualización para la Home
-const noticiaDestacada = noticias[0];
-const restoNoticias = noticias.slice(1, 3);
 const casosHome = casos.slice(0, 6);
 const videosHome = videos.slice(0, 4);
 ---
@@ -43,22 +53,22 @@ const videosHome = videos.slice(0, 4);
 					<span>Reproducir vídeo institucional</span>
 				</div>
 				<div class="news-body">
-					<span class="tag">{noticiaDestacada.tipo}</span>
-					<h3>{noticiaDestacada.titulo}</h3>
-					<p>{noticiaDestacada.resumen}</p>
-					<div class="meta">📅 {noticiaDestacada.fecha} {noticiaDestacada.lugar && `· 🏥 ${noticiaDestacada.lugar}`}</div>
+					<span class="tag">{noticiaDestacada.data.tipo}</span>
+					<h3>{noticiaDestacada.data.title}</h3>
+					<p>{noticiaDestacada.data.resumen}</p>
+					<div class="meta">📅 {noticiaDestacada.data.lugar} {noticiaDestacada.data.lugar && `· 🏥 ${noticiaDestacada.data.fecha}`}</div>
 				</div>
 			</article>
 
 			<div class="news-sidebar">
 				{restoNoticias.map(noticia => (
 					<article class="news-card-mini">
-						<div class="news-mini-icon">{noticia.icono}</div>
+						<div class="news-mini-icon">{noticia.data.icono}</div>
 						<div class="news-mini-content">
-							<span class="tag-sm">{noticia.tipo}</span>
-							<h4>{noticia.titulo}</h4>
-							<p>{noticia.resumen}</p>
-							<span class="meta-sm">{noticia.fecha}</span>
+							<span class="tag-sm">{noticia.data.tipo}</span>
+							<h4>{noticia.data.title}</h4>
+							<p>{noticia.data.resumen}</p>
+							<span class="meta-sm">{noticia.data.fecha}</span>
 						</div>
 					</article>
 				))}

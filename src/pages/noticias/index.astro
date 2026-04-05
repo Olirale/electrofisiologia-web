@@ -1,13 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/noticias-listado.css';
+import '../../styles/noticias.css';
 
-// Cargamos todos los archivos Markdown de la carpeta actual
-const posts = await Astro.glob('./*.md');
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('noticias');
 
 // Los ordenamos por fecha (de más reciente a más antiguo)
 const sortedPosts = posts.sort((a, b) =>
-    new Date(b.frontmatter.fecha).getTime() - new Date(a.frontmatter.fecha).getTime()
+    new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
 );
 ---
 
@@ -22,16 +23,16 @@ const sortedPosts = posts.sort((a, b) =>
 
             <div class="news-grid-archive">
                 {sortedPosts.map(post => (
-                        <a href={post.url} class="news-card-archive">
+                        <a href={`/noticias/${post.id}`} class="news-card-archive">
                             <div class="news-card-img">
-                                {post.frontmatter.icono || '📰'}
+                                {post.data.icono || '📰'}
                             </div>
                             <div class="news-card-content">
-                                <span class="tag">{post.frontmatter.tipo}</span>
-                                <h2>{post.frontmatter.title}</h2>
-                                <p>{post.frontmatter.resumen}</p>
+                                <span class="tag">{post.data.tipo}</span>
+                                <h2>{post.data.title}</h2>
+                                <p>{post.data.resumen}</p>
                                 <div class="news-card-footer">
-                                    <span class="meta-sm">📅 {post.frontmatter.fecha}</span>
+                                    <span class="meta-sm">📅 {post.data.fecha}</span>
                                     <span class="btn-text">Leer más</span>
                                 </div>
                             </div>

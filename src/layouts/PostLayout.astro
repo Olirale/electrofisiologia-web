@@ -1,0 +1,51 @@
+---
+import Layout from './Layout.astro';
+import '../styles/noticias.css';
+import '../styles/noticia.css';
+
+const { frontmatter } = Astro.props;
+
+// Formatear la fecha para que quede bonita (ej: 15 de marzo, 2025)
+const fechaFormateada = new Date(frontmatter.fecha).toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+---
+
+<Layout title={`${frontmatter.title} | Unidad de Electrofisiología`}>
+    <article class="post-container">
+        <header class="post-hero">
+            <div class="post-meta-top">
+                <span class="post-tag">{frontmatter.tipo}</span>
+                <time datetime={frontmatter.fecha}>{fechaFormateada}</time>
+            </div>
+
+            <h1 class="post-title">{frontmatter.title}</h1>
+
+            {frontmatter.resumen && (
+                    <p class="post-excerpt">{frontmatter.resumen}</p>
+            )}
+
+            {frontmatter.lugar && (
+                    <div class="post-location">
+                        <span>📍 {frontmatter.lugar}</span>
+                    </div>
+            )}
+
+            <div class="post-divider"></div>
+        </header>
+
+        <div class="post-content-wrapper">
+            <div class="post-content">
+                <slot />
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <a href="/noticias" class="btn-back">
+                <span class="icon">←</span> Volver a noticias
+            </a>
+        </footer>
+    </article>
+</Layout>
