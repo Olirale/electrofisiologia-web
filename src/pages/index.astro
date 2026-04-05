@@ -23,6 +23,7 @@ import equipo from '../data/equipo.json';
 // Lógica de visualización para la Home
 const casosHome = casos.slice(0, 6);
 const videosHome = videos.slice(0, 4);
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Unidad de Electrofisiología · CHUAC">
@@ -48,15 +49,15 @@ const videosHome = videos.slice(0, 4);
 
 		<div class="news-layout">
 			<article class="news-featured">
-				<div class="video-placeholder">
-					<div class="play-button">▶</div>
-					<span>Reproducir vídeo institucional</span>
-				</div>
+				<div class="news-icon">{noticiaDestacada.data.icono}</div>
 				<div class="news-body">
-					<span class="tag">{noticiaDestacada.data.tipo}</span>
-					<h3>{noticiaDestacada.data.title}</h3>
-					<p>{noticiaDestacada.data.resumen}</p>
-					<div class="meta">📅 {noticiaDestacada.data.lugar} {noticiaDestacada.data.lugar && `· 🏥 ${noticiaDestacada.data.fecha}`}</div>
+					<a href={`${base}/noticias/${noticiaDestacada.id}`} class="news-card-archive">
+
+						<span class="tag">{noticiaDestacada.data.tipo}</span>
+						<h3>{noticiaDestacada.data.title}</h3>
+						<p>{noticiaDestacada.data.resumen}</p>
+						<div class="meta">📅 {noticiaDestacada.data.lugar} {noticiaDestacada.data.lugar && `· 🏥 ${noticiaDestacada.data.fecha}`}</div>
+					</a>
 				</div>
 			</article>
 
@@ -65,10 +66,12 @@ const videosHome = videos.slice(0, 4);
 					<article class="news-card-mini">
 						<div class="news-mini-icon">{noticia.data.icono}</div>
 						<div class="news-mini-content">
-							<span class="tag-sm">{noticia.data.tipo}</span>
-							<h4>{noticia.data.title}</h4>
-							<p>{noticia.data.resumen}</p>
-							<span class="meta-sm">{noticia.data.fecha}</span>
+							<a href={`${base}/noticias/${noticia.id}`} class="news-card-archive">
+								<span class="tag-sm">{noticia.data.tipo}</span>
+								<h4>{noticia.data.title}</h4>
+								<p>{noticia.data.resumen}</p>
+								<span class="meta-sm">{noticia.data.fecha}</span>
+							</a>
 						</div>
 					</article>
 				))}
@@ -76,7 +79,7 @@ const videosHome = videos.slice(0, 4);
 		</div>
 
 		<div class="center-link">
-			<a href="/noticias" class="view-all">Ver todas las noticias →</a>
+			<a href={`${base}/noticias/`} class="view-all">Ver todas las noticias →</a>
 		</div>
 	</section>
 
