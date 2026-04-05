@@ -7,7 +7,7 @@ import { glob, file } from 'astro/loaders';
 
 const posts = await getCollection('noticias');
 const casosAll = await getCollection('casos');
-const casosHome = casosAll.slice(0, 6);
+const casosHome = casosAll.slice(0, 5);
 
 const sortedPosts = posts.sort((a, b) =>
 	new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()

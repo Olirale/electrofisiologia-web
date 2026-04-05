@@ -40,7 +40,8 @@ h1, h2, h3, h4 {
 }
 
 .nav-container {
-    max-width: 1200px; margin: 0 auto;
+    max-width: 90%;
+    margin: 0 auto;
     padding: 0 2rem;
     display: flex; justify-content: space-between; align-items: center;
 }
@@ -77,7 +78,7 @@ h1, h2, h3, h4 {
 .nav-logo.invert .logo-main { color: white; }
 
 /* REUSABLE CLASSES */
-.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+.container { max-width: 90%; margin: 0 auto; padding: 4rem 2rem; }
 .bg-offwhite { background: var(--off-white); }
 .bg-navy { background: var(--navy); color: white; }
 .gold-line { width: 50px; height: 3px; background: var(--accent); margin: 1rem 0 2rem; }
