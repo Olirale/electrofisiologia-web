@@ -1,13 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Se ejecuta cada vez que haces push a la rama main
   push:
     branches: [main]
-  # Permite ejecutar el despliegue manualmente desde la pestaña Actions
   workflow_dispatch:
 
-# Permisos necesarios para que GitHub Actions pueda publicar en Pages
 permissions:
   contents: read
   pages: write
@@ -16,10 +13,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Esto quita el aviso de Node 20
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 
