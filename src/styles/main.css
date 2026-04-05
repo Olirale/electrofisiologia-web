@@ -8,6 +8,7 @@
     --off-white: #f4f8fd;
     --text: #1a2535;
     --gray: #6b7a8d;
+    --light-gray: #e8eef5;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/noticias-listado.css';
+
+// Cargamos todos los archivos Markdown de la carpeta actual
+const posts = await Astro.glob('./*.md');
+
+// Los ordenamos por fecha (de más reciente a más antiguo)
+const sortedPosts = posts.sort((a, b) =>
+    new Date(b.frontmatter.fecha).getTime() - new Date(a.frontmatter.fecha).getTime()
+);
+---
+
+<Layout title="Archivo de Noticias · Unidad de Electrofisiología">
+    <section class="news-archive-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Comunicación</span>
+                <h1 class="section-title">Actualidad y Noticias</h1>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="news-grid-archive">
+                {sortedPosts.map(post => (
+                        <a href={post.url} class="news-card-archive">
+                            <div class="news-card-img">
+                                {post.frontmatter.icono || '📰'}
+                            </div>
+                            <div class="news-card-content">
+                                <span class="tag">{post.frontmatter.tipo}</span>
+                                <h2>{post.frontmatter.title}</h2>
+                                <p>{post.frontmatter.resumen}</p>
+                                <div class="news-card-footer">
+                                    <span class="meta-sm">📅 {post.frontmatter.fecha}</span>
+                                    <span class="btn-text">Leer más</span>
+                                </div>
+                            </div>
+                        </a>
+                ))}
+            </div>
+
+            {sortedPosts.length === 0 && (
+                    <p style="text-align: center; color: var(--gray); padding: 4rem;">
+                        No hay noticias publicadas en este momento.
+                    </p>
+            )}
+        </div>
+    </section>
+</Layout>
