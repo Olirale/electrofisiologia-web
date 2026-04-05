@@ -103,7 +103,7 @@
 }
 
 .news-body { padding: 2.5rem; }
-.tag {
+.tag, .tag-sm{
     background: var(--sky);
     color: white;
     padding: 0.2rem 0.6rem;
@@ -125,6 +125,7 @@
     align-items: flex-start;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--light-gray);
+
 }
 
 .news-mini-icon {
@@ -136,6 +137,8 @@
     text-align: center;
 }
 
+.news-mini-content a { text-decoration: none;}
+.news-body a {  text-decoration: none;}
 .news-mini-content h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
 .meta-sm { font-size: 0.85rem; color: var(--gray); display: block; margin-top: 0.5rem; }
 

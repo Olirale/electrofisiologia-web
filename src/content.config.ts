@@ -14,4 +14,19 @@ const posts = defineCollection({
     }),
 });
 
-export const collections = {noticias: posts}
+const cases = defineCollection({
+    loader: glob({ base: './src/pages/casos', pattern: '**/*.{md,mdx}' }),
+    schema: z.object({
+        id: z.number(),
+        title: z.string(),
+        resumen: z.string(),
+        fecha: z.coerce.date(),
+        tipo: z.string().optional(),
+        icono: z.string().optional(),
+    }),
+});
+
+export const collections = {
+    noticias: posts,
+    casos: cases
+}
