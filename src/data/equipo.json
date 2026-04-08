@@ -1,7 +1,7 @@
 [
   {
-    "nombre": "Dr/a. Caponata",
-    "puesto": "Jefe de barrio sésamo",
+    "nombre": "Dr/a. Enrique Ricoy ",
+    "puesto": "Coordinador",
     "resumen": "Especialista en estar contento.",
     "imagen": "img.png"
   },
@@ -15,6 +15,7 @@
     "nombre": "Alejandro",
     "puesto": "Enfermería",
     "resumen": "Dedicación especial al implante de dispositivos y terapia de resincronización cardiaca."
+    "imagen": ""
   },
   {
     "nombre": "Dr/a. Apellido D",
