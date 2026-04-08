@@ -1,7 +1,7 @@
 ---
 title: "Prueba de noticia introducida desde git"
 resumen: "Probando una forma sencilla de introducir noticias desde git"
-fecha: "2026-06-04"
+fecha: "2026-01-04"
 lugar: "CHUAC · A Coruña"
 tipo: "Formación"
 icono: "🎓"
