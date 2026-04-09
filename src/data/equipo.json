@@ -9,7 +9,7 @@
     "nombre": "Dr/a. Apellido B",
     "puesto": "Facultativo Especialista",
     "resumen": "Experto en ablación de FA y taquicardias supraventriculares. Miembro de grupos de trabajo de la SEC.",
-  
+    "imagen": "img.png"
   },
   {
     "nombre": "Alejandro",
@@ -21,5 +21,6 @@
     "nombre": "Dr/a. Apellido D",
     "puesto": "Residente EFI",
     "resumen": "En formación especializada en electrofisiología. Investigación en ablación de TV en cardiopatía estructural."
+    "imagen": "img.png"
   }
 ]
