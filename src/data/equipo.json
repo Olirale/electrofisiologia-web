@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "Dr/a. Enrique Ricoy ",
+    "nombre": "Dr/a. Enrique Ricoy",
     "puesto": "Coordinador",
     "resumen": "Especialista en estar contento.",
     "imagen": "ricoy.png"
@@ -29,7 +29,7 @@
     "resumen": "Más de 6 años de experiencia en la unidad.",
     "imagen": "eva.png"
   },
-   {
+  {
     "nombre": "Teresa",
     "puesto": "TCAE",
     "resumen": "...",
@@ -53,7 +53,7 @@
     "resumen": "Webmaster en prácticas.",
     "imagen": "alex.png"
   },
-   {
+  {
     "nombre": "Mar Mosteiro",
     "puesto": "Enfermera",
     "resumen": "Prudente.",
@@ -70,5 +70,5 @@
     "puesto": "Enfermera",
     "resumen": "...",
     "imagen": "joana.png"
-  },
+  }
 ]
