@@ -3,24 +3,72 @@
     "nombre": "Dr/a. Enrique Ricoy ",
     "puesto": "Coordinador",
     "resumen": "Especialista en estar contento.",
-    "imagen": "img.png"
+    "imagen": "ricoy.png"
   },
   {
-    "nombre": "Dr/a. Apellido B",
-    "puesto": "Facultativo Especialista",
-    "resumen": "Experto en ablación de FA y taquicardias supraventriculares. Miembro de grupos de trabajo de la SEC.",
-    "imagen": "img.png"
+    "nombre": "Dr. Mosquera I",
+    "puesto": "Médico adjunto en arritmias",
+    "resumen": "Experto en Electrofisiología y Estimulación cardíaca. Coordinador docente.",
+    "imagen": "mosquera.png"
   },
   {
-    "nombre": "Alejandro",
-    "puesto": "Enfermería",
+    "nombre": "Manuela Bellón Lata",
+    "puesto": "Enfermera",
+    "resumen": "Experta en Electrofisiología y Estimulación cardíaca acreditada por la AEEC.",
+    "imagen": "manuela.png"
+  },
+  {
+    "nombre": "Dr. Rodríguez Garrido J.",
+    "puesto": "Médico adjunto en arritmias",
+    "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
+    "imagen": "jorge.png"
+  },
+  {
+    "nombre": "Eva",
+    "puesto": "Enfermera",
+    "resumen": "Más de 6 años de experiencia en la unidad.",
+    "imagen": "eva.png"
+  },
+   {
+    "nombre": "Teresa",
+    "puesto": "TCAE",
+    "resumen": "...",
+    "imagen": "tere.png"
+  },
+  {
+    "nombre": "Dr. Fernández de Aspe P",
+    "puesto": "Médico adjunto en arritmias",
+    "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
+    "imagen": "pablo.png"
+  },
+  {
+    "nombre": "Dra. Vázquez R.",
+    "puesto": "Médico adjunto en arritmias",
+    "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
+    "imagen": "raquel.png"
+  },
+  {
+    "nombre": "Alejandro Sánchez",
+    "puesto": "Enfermero",
     "resumen": "Webmaster en prácticas.",
     "imagen": "alex.png"
   },
+   {
+    "nombre": "Mar Mosteiro",
+    "puesto": "Enfermera",
+    "resumen": "Prudente.",
+    "imagen": "mar.png"
+  },
   {
-    "nombre": "Dr/a. Apellido D",
-    "puesto": "Residente EFI",
-    "resumen": "En formación especializada en electrofisiología. Investigación en ablación de TV en cardiopatía estructural.",
-    "imagen": "img.png"
-  }
+    "nombre": "Beatriz Varela",
+    "puesto": "Enfermera",
+    "resumen": "....",
+    "imagen": "bea.png"
+  },
+  {
+    "nombre": "Joana de Sousa",
+    "puesto": "Enfermera",
+    "resumen": "...",
+    "imagen": "joana.png"
+  },
 ]
