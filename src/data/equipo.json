@@ -1,12 +1,12 @@
 [
   {
-    "nombre": "Dr/a. Enrique Ricoy",
-    "puesto": "Coordinador",
-    "resumen": "Especialista en estar contento.",
+    "nombre": "Dr Ricoy",
+    "puesto": "Médico adjunto en Arritmias y coordinador del servicio.",
+    "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
     "imagen": "ricoy.png"
   },
   {
-    "nombre": "Dr. Mosquera I",
+    "nombre": "Dr. Mosquera",
     "puesto": "Médico adjunto en arritmias",
     "resumen": "Experto en Electrofisiología y Estimulación cardíaca. Coordinador docente.",
     "imagen": "nacho.png"
@@ -18,7 +18,7 @@
     "imagen": "manuela.png"
   },
   {
-    "nombre": "Dr. Rodríguez Garrido J.",
+    "nombre": "Dr. Rodríguez Garrido",
     "puesto": "Médico adjunto en arritmias",
     "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
     "imagen": "jorge.png"
@@ -36,7 +36,7 @@
     "imagen": "tere.png"
   },
   {
-    "nombre": "Dr. Fernández de Aspe P",
+    "nombre": "Dr. Fernández de Aspe",
     "puesto": "Médico adjunto en arritmias",
     "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
     "imagen": "pablo.png"
