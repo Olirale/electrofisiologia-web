@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import '../styles/index.css';
 
 import { getCollection } from 'astro:content';
-import { glob, file } from 'astro/loaders';
 
 const posts = await getCollection('noticias');
 const casosAll = await getCollection('casos');
@@ -16,7 +15,6 @@ const sortedPosts = posts.sort((a, b) =>
 
 const noticiaDestacada = posts[0];
 const restoNoticias = posts.slice(1, 3);
-
 
 // Importación de datos desde los JSON
 import videos from '../data/videos.json';
@@ -57,7 +55,6 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 				<div class="news-icon">{noticiaDestacada.data.icono}</div>
 				<div class="news-body">
 					<a href={`${base}/noticias/${noticiaDestacada.id}`} class="news-card-archive">
-
 						<span class="tag">{noticiaDestacada.data.tipo}</span>
 						<h3>{noticiaDestacada.data.title}</h3>
 						<p>{noticiaDestacada.data.resumen}</p>
@@ -98,28 +95,24 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 
 			<section class="casos-grid">
 				{casosHome.map(caso => (
-
 					<article class="caso-card">
 						<div class="caso-header">
 							<span class="caso-icon">{caso.data.icono}</span>
 							<span class="caso-number">#{caso.data.numero}</span>
 						</div>
-
 						<div class="caso-body">
 							<span class="caso-type">{caso.data.tipo}</span>
 							<h3>{caso.data.title}</h3>
 							<p>{caso.data.resumen}</p>
 						</div>
-
 						<div class="caso-footer">
 							<a href={`${base}/casos/${caso.id}`} class="btn-text">Ver detalles del caso</a>
 						</div>
 					</article>
-
 				))}
 			</section>
 			<div class="center-link">
-				<a  href="./fellowship" class="btn-primary">Ver Programa Completo</a>
+				<a href={`${base}/fellowship/`} class="btn-primary">Ver Programa Completo</a>
 			</div>
 		</div>
 	</section>
@@ -140,13 +133,14 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 						<h3>Especialización en Electrofisiología Clínica</h3>
 						<p>Formación integral para cardiólogos en el diagnóstico y tratamiento de arritmias, con acceso a tecnología de navegación 3D y laboratorio de última generación.</p>
 						<div class="hero-cta" style="margin-top: 20px;">
-							<a href="/fellowship" class="btn-primary">Ver Programa Completo</a>
+							<a href={`${base}/fellowship/`} class="btn-primary">Ver Programa Completo</a>
 						</div>
 					</div>
 				</div>
 			</article>
 		</div>
 	</section>
+
 	<section id="videos" class="bg-navy">
 		<div class="container">
 			<div class="section-header invert">
@@ -187,14 +181,9 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 
 		<section class="team-grid">
 			{equipo.map(persona => {
-				// 2. Construimos la ruta exacta que busca el glob
-        const rutaImagen = persona.imagen ? `${carpetaImagenes}${persona.imagen}` : null;
-
-				// 3. Verificamos si existe la ruta en el JSON Y si existe físicamente en la carpeta
-        const imagenData = rutaImagen && imagenes[rutaImagen] ? imagenes[rutaImagen].default : null;
-
-				// 4. Limpiamos el nombre para el placeholder (Quita "Dr/a. " para coger la letra real)
-        const letraPlaceholder = persona.nombre.replace('Dr/a. ', '').charAt(0);
+				const rutaImagen = persona.imagen ? `${carpetaImagenes}${persona.imagen}` : null;
+				const imagenData = rutaImagen && imagenes[rutaImagen] ? imagenes[rutaImagen].default : null;
+				const letraPlaceholder = persona.nombre.replace('Dr/a. ', '').charAt(0);
 
 				return (
 					<div class="team-card">
@@ -211,7 +200,6 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 								<div class="team-placeholder">{letraPlaceholder}</div>
 							)}
 						</div>
-
 						<div class="team-info">
 							<h3>{persona.nombre}</h3>
 							<span class="role">{persona.puesto}</span>
@@ -229,7 +217,6 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 				<h2 class="section-title">Contacto</h2>
 				<div class="gold-line"></div>
 				<p>Estamos situados en el Complejo Hospitalario Universitario de A Coruña (CHUAC).</p>
-
 				<div class="contact-details">
 					<div class="detail-item">
 						<strong>📍 Ubicación Física</strong>
@@ -241,7 +228,6 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 					</div>
 				</div>
 			</div>
-
 			<form class="contact-form" action="#" method="POST">
 				<div class="form-group">
 					<label for="name">Nombre</label>
