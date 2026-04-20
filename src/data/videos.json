@@ -1,9 +1,15 @@
 [
   {
-    "url": "https://www.youtube.com/embed/4iJW_slJyAI?si=BtfB4mhdj0R3vGSD",
+    "url": "https://www.youtube.com/embed/Oa4gZfF_LYE?si=rAMPu0MTRdfAcZYq",
     "tipo": "Enfermedad",
     "titulo": "Fibrilación auricular: qué es y cómo afecta al corazón",
     "resumen": "Explicación sencilla de la FA, sus síntomas y opciones de tratamiento."
+  },
+  {
+    "url": "https://www.youtube.com/embed/4iJW_slJyAI?si=BtfB4mhdj0R3vGSD",
+    "tipo": "Enfermedad",
+    "titulo": "Entendiendo la Fibrilación Auricular",
+    "resumen": "Vídeo detallado sobre los mecanismos de la arritmia y el riesgo de ictus."
   },
   {
     "url": "https://player.vimeo.com/video/411870028?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
