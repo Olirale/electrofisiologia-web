@@ -1,9 +1,9 @@
 [
   {
-    "url": "https://www.youtube.com/embed/Oa4gZfF_LYE?si=rAMPu0MTRdfAcZYq",
+    "url": "https://www.youtube.com/embed/fzTaan9HA1c?si=BVL7k7_0sDPrNnh_",
     "tipo": "Enfermedad",
-    "titulo": "Fibrilación auricular: qué es y cómo afecta al corazón",
-    "resumen": "Explicación sencilla de la FA, sus síntomas y opciones de tratamiento."
+    "titulo": "Fibrilación auricular: qué es y cómo afecta",
+    "resumen": "Explicación de la Fundación Española del Corazón sobre la FA, síntomas y tratamientos."
   },
   {
     "url": "https://www.youtube.com/embed/4iJW_slJyAI?si=BtfB4mhdj0R3vGSD",
@@ -19,8 +19,8 @@
   },
   {
     "url": "https://www.youtube.com/embed/5aJKKgSEUnc",
-    "tipo": "Enfermedad",
-    "titulo": "Taquicardia ventricular",
-    "resumen": "Información sobre la TV y su relación con la muerte súbita cardíaca."
+    "tipo": "Procedimiento",
+    "titulo": "Ablación con catéter: en qué consiste",
+    "resumen": "Qué se siente durante la ablación y cómo es la recuperación posterior."
   }
 ]
