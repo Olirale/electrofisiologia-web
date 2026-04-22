@@ -25,7 +25,7 @@ const navLinks = [
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
 	<meta name="generator" content={Astro.generator} />
 	<title>{title}</title>
 
@@ -38,10 +38,9 @@ const navLinks = [
 	<div class="nav-container" style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem;">
 		<a href={`${base}/`} class="nav-logo" style="display: flex; align-items: center;">
 			<img 
-				src="/logoarritmias.png" 
+				src={`${base}/logoarritmias.png`} 
 				alt="Unidad de Arritmias CHUAC" 
 				style="height: 65px; width: auto; object-fit: contain;" 
-				onerror="this.src='https://via.placeholder.com/150x50?text=Logo+Error'"
 			/>
 		</a>
 
@@ -62,7 +61,7 @@ const navLinks = [
 		<div class="footer-info">
 			<a href={`${base}/`} class="nav-logo">
 				<img 
-					src="/logoarritmias.png" 
+					src={`${base}/logoarritmias.png`} 
 					alt="Logo Arritmias" 
 					style="height: 55px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" 
 				/>
