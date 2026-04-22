@@ -35,13 +35,14 @@ const navLinks = [
 </head>
 <body>
 <nav class="navbar" id="navbar">
-	<div class="nav-container">
-		<a href={`${base}/`} class="nav-logo">
-			<img src="/logoarritmias.png" alt="Logo Arritmias CHUAC" style="height: 50px; width: auto; margin-right: 15px;" />
-			<div class="logo-text">
-				<span class="logo-main">ELECTROFISIOLOGÍA</span>
-				<span class="logo-sub">CHUAC · A CORUÑA</span>
-			</div>
+	<div class="nav-container" style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem;">
+		<a href={`${base}/`} class="nav-logo" style="display: flex; align-items: center;">
+			<img 
+				src="/logoarritmias.png" 
+				alt="Unidad de Arritmias CHUAC" 
+				style="height: 65px; width: auto; object-fit: contain;" 
+				onerror="this.src='https://via.placeholder.com/150x50?text=Logo+Error'"
+			/>
 		</a>
 
 		<div class="nav-links">
@@ -59,14 +60,14 @@ const navLinks = [
 <footer class="footer">
 	<div class="container footer-grid">
 		<div class="footer-info">
-			<div class="nav-logo invert">
-				<img src="/logoarritmias.png" alt="Logo Arritmias CHUAC" style="height: 45px; width: auto; margin-right: 15px; filter: brightness(0) invert(1);" />
-				<div class="logo-text">
-					<span class="logo-main">ELECTROFISIOLOGÍA</span>
-					<span class="logo-sub">CHUAC · A CORUÑA</span>
-				</div>
-			</div>
-			<p>Unidad de referencia para el tratamiento integral de arritmias.</p>
+			<a href={`${base}/`} class="nav-logo">
+				<img 
+					src="/logoarritmias.png" 
+					alt="Logo Arritmias" 
+					style="height: 55px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" 
+				/>
+			</a>
+			<p style="margin-top: 1rem; font-size: 0.9rem;">Unidad de referencia para el tratamiento integral de arritmias.</p>
 		</div>
 
 		<div class="footer-contact">
