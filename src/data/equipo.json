@@ -65,16 +65,17 @@
     "resumen": "Prudente.",
     "imagen": "mar.png"
   },
-  {
-    "nombre": "Beatriz Varela",
-    "puesto": "Enfermera",
-    "resumen": "....",
-    "imagen": "bea.png"
-  },
-  {
+    {
     "nombre": "Joana de Sousa",
     "puesto": "Enfermera",
     "resumen": "...",
     "imagen": "joana.png"
   }
 ]
+  {
+    "nombre": "Beatriz Varela",
+    "puesto": "Enfermera",
+    "resumen": "....",
+    "imagen": "bea.png"
+  },
+
