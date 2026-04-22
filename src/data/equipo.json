@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "Dr Ricoy",
+    "nombre": "Dr. Ricoy",
     "puesto": "Médico adjunto en Arritmias y coordinador del servicio.",
     "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
     "imagen": "ricoy.png"
@@ -19,7 +19,7 @@
   },
   {
     "nombre": "María Aranzazu Molina Nieto",
-    "puesto": "Enfermera, superivisora de unidad",
+    "puesto": "Enfermera, supervisora de unidad",
     "resumen": "Experta en Electrofisiología y Estimulación cardíaca acreditada por la AEEC.",
     "imagen": "arancha.jpg"
   },
@@ -38,7 +38,7 @@
   {
     "nombre": "Teresa",
     "puesto": "TCAE",
-    "resumen": "...",
+    "resumen": "Personal técnico en cuidados auxiliares de enfermería.",
     "imagen": "tere.png"
   },
   {
@@ -56,26 +56,25 @@
   {
     "nombre": "Alejandro Sánchez",
     "puesto": "Enfermero",
-    "resumen": "Webmaster en prácticas.",
+    "resumen": "Desarrollo y mantenimiento de plataforma digital.",
     "imagen": "alex.png"
   },
   {
     "nombre": "Mar Mosteiro",
     "puesto": "Enfermera",
-    "resumen": "Prudente.",
+    "resumen": "Experta en cuidados de enfermería en arritmias.",
     "imagen": "mar.png"
   },
-    {
+  {
     "nombre": "Joana de Sousa",
     "puesto": "Enfermera",
-    "resumen": "...",
+    "resumen": "Experta en cuidados de enfermería en arritmias.",
     "imagen": "joana.png"
   },
-]
   {
     "nombre": "Beatriz Varela",
     "puesto": "Enfermera",
-    "resumen": "....",
+    "resumen": "Experta en cuidados de enfermería en arritmias.",
     "imagen": "bea.png"
-  },
-
+  }
+]
