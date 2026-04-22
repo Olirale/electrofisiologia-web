@@ -35,12 +35,13 @@ const navLinks = [
 </head>
 <body>
 <nav class="navbar" id="navbar">
-	<div class="nav-container" style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem;">
+	<div class="nav-container" style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.5rem;">
 		<a href={`${base}/`} class="nav-logo" style="display: flex; align-items: center;">
 			<img 
 				src={`${base}/logoarritmias.png`} 
 				alt="Unidad de Arritmias CHUAC" 
-				style="height: 65px; width: auto; object-fit: contain;" 
+				id="nav-logo-img"
+				style="height: 90px; width: auto; object-fit: contain; transition: all 0.3s ease;" 
 			/>
 		</a>
 
@@ -63,10 +64,10 @@ const navLinks = [
 				<img 
 					src={`${base}/logoarritmias.png`} 
 					alt="Logo Arritmias" 
-					style="height: 55px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" 
+					style="height: 60px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" 
 				/>
 			</a>
-			<p style="margin-top: 1rem; font-size: 0.9rem;">Unidad de referencia para el tratamiento integral de arritmias.</p>
+			<p style="margin-top: 1.5rem; font-size: 0.95rem;">Unidad de referencia para el tratamiento integral de arritmias.</p>
 		</div>
 
 		<div class="footer-contact">
@@ -85,6 +86,20 @@ const navLinks = [
 		<p>&copy; {new Date().getFullYear()} Unidad de Electrofisiología CHUAC.</p>
 	</div>
 </footer>
+
+<style is:global>
+	/* Estilo para que el logo se haga más pequeño al hacer scroll */
+	.navbar.scrolled #nav-logo-img {
+		height: 60px !important;
+	}
+    
+    /* Asegurar que el nav-container mantenga el alineado */
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+</style>
 
 <script>
 	const nav = document.getElementById('navbar');
