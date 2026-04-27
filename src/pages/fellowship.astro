@@ -108,4 +108,80 @@ const base = import.meta.env.BASE_URL;
 				</div>
 				<div class="hero-cta" style="margin-top: 32px;">
 					<a href={`${base}/#contacto`} class="btn-primary">Contactar con la unidad</a>
+					<a href={`${base}/`} class="btn-outline">Volver al inicio</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- SECCIÓN FELLOWS -->
+		<div class="section-header" style="margin-top: 80px;">
+			<h2 class="section-title" style="font-size: 1.6rem;">Fellows del Programa</h2>
+			<div class="gold-line"></div>
+		</div>
+
+		<!-- FELLOWS EN ACTIVO -->
+		<div class="section-header" style="margin-top: 40px; margin-bottom: 8px;">
+			<h3 style="font-size: 1.1rem; color: var(--color-gold); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;">Fellows en activo</h3>
+		</div>
+
+		<div style="display: grid; grid-template-columns: repeat(2, minmax(160px, 200px)); gap: 32px; margin-top: 24px;">
+
+			<div style="text-align: center;">
+				<div style="width: 110px; height: 110px; border-radius: 50%; background: var(--color-surface, #e8e8e8); border: 2px solid var(--color-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="color: #aaa;">
+						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+					</svg>
+				</div>
+				<p style="font-size: 0.85rem; font-weight: 600; margin: 0;">Dr. Edison Omar Boada Lincango</p>
+				<p style="font-size: 0.78rem; color: var(--color-text-muted, #888); margin: 4px 0 0;">Fellow en activo</p>
+			</div>
+
+			<div style="text-align: center;">
+				<div style="width: 110px; height: 110px; border-radius: 50%; background: var(--color-surface, #e8e8e8); border: 2px solid var(--color-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="color: #aaa;">
+						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+					</svg>
+				</div>
+				<p style="font-size: 0.85rem; font-weight: 600; margin: 0;">Dr. Miguel Montes</p>
+				<p style="font-size: 0.78rem; color: var(--color-text-muted, #888); margin: 4px 0 0;">Fellow en activo</p>
+			</div>
+
+		</div>
+
+		<!-- EX-FELLOWS -->
+		<div class="section-header" style="margin-top: 56px; margin-bottom: 8px;">
+			<h3 style="font-size: 1.1rem; color: var(--color-gold); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;">Ex-fellows — Promociones anteriores</h3>
+		</div>
+
+		<div style="display: grid; grid-template-columns: repeat(3, minmax(160px, 200px)); gap: 32px; margin-top: 24px; margin-bottom: 60px;">
+
+			<div style="text-align: center;">
+				<img src={`${base}assets/img/equipo/pablo.png`} alt="Dr. Pablo Fernández de Aspe"
+					style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid #aaa; display: block; margin: 0 auto 12px;" />
+				<p style="font-size: 0.85rem; font-weight: 600; margin: 0;">Dr. Pablo Fernández de Aspe</p>
+				<p style="font-size: 0.78rem; color: var(--color-text-muted, #888); margin: 4px 0 0;">Cardiólogo adjunto en Arritmias CHUAC</p>
+			</div>
+
+			<div style="text-align: center;">
+				<img src={`${base}assets/img/equipo/raquel.png`} alt="Dra. Raquel Vázquez García"
+					style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid #aaa; display: block; margin: 0 auto 12px;" />
+				<p style="font-size: 0.85rem; font-weight: 600; margin: 0;">Dra. Raquel Vázquez García</p>
+				<p style="font-size: 0.78rem; color: var(--color-text-muted, #888); margin: 4px 0 0;">Cardiólogo adjunto en Arritmias CHUAC</p>
+			</div>
+
+			<div style="text-align: center;">
+				<div style="width: 110px; height: 110px; border-radius: 50%; background: var(--color-surface, #e8e8e8); border: 2px solid #aaa; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="color: #aaa;">
+						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+					</svg>
+				</div>
+				<p style="font-size: 0.85rem; font-weight: 600; margin: 0;">Dr. Alejandro Used</p>
+				<p style="font-size: 0.78rem; color: var(--color-text-muted, #888); margin: 4px 0 0;">Cardiólogo adjunto en Arritmias CHULA</p>
+			</div>
+
+		</div>
+
+	</section>
+</Layout>
+					<a href={`${base}/#contacto`} class="btn-primary">Contactar con la unidad</a>
 					<a href={`${base}/`} class
