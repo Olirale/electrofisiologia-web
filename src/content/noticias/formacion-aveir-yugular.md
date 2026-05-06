@@ -9,7 +9,7 @@ imagen: "./aveirformacion1.png"
 
 El pasado 6 de mayo de 2026, nuestra Unidad de Electrofisiología llevó a cabo una jornada intensiva de formación técnica centrada en el **implante de marcapasos sin cables AVEIR**.
 
-Esta sesión formativa se centró específicamente en el **acceso por vena yugular**, una técnica avanzada que ofrece alternativas cruciales para pacientes con accesos vasculares femorales complejos o agotados, así como prescindir de la necesidad de sedación.
+Esta sesión formativa se centró específicamente en el **acceso por vena yugular**, una técnica avanzada que ofrece alternativas cruciales para pacientes con accesos vasculares femorales complejos o agotados.
 
 ### Expertos de la Unidad
 El curso fue impartido por los doctores de nuestra unidad, especialistas con amplia experiencia en esta técnica:
