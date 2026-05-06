@@ -19,6 +19,6 @@ El curso fue impartido por los doctores de nuestra unidad, especialistas con amp
 ### Unidad de Referencia
 Consolidamos nuestra posición como **unidad de referencia** para el implante de marcapasos sin cables por vía yugular.
 
-![Jornada de formación AVEIR](/electrofisiologia-web/aveirformacion1.png)
+![Jornada de formación AVEIR](/aveirformacion1.png)
 
 *Pie de foto: Sesión de formación sobre el sistema AVEIR en nuestra sala de electrofisiología.*
