@@ -17,7 +17,7 @@ El curso fue impartido por los doctores de nuestra unidad, especialistas con amp
 *   **Dr. Nacho Mosquera**
 
 ### Unidad de Referencia
-Consolidamos nuestra posición como **unidad de referencia** para el implante de marcapasos sin cables por vía yugular. La capacidad de realizar este procedimiento con éxito permite a nuestro equipo ofrecer soluciones personalizadas y mínimamente invasivas a una mayor diversidad de perfiles clínicos, mejorando la seguridad y los tiempos de recuperación de los pacientes.
+Consolidamos nuestra posición como **unidad de referencia** para el implante de marcapasos sin cables por vía yugular.
 
 ![Jornada de formación AVEIR](/aveirformacion1.png)
 
