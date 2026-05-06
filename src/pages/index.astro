@@ -52,7 +52,11 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 
 		<div class="news-layout">
 			<article class="news-featured">
-				<div class="news-icon">{noticiaDestacada.data.icono}</div>
+				{noticiaDestacada.data.imagen ? (
+					<img src={noticiaDestacada.data.imagen} alt={noticiaDestacada.data.title} class="news-featured-img" />
+				) : (
+					<div class="news-icon">{noticiaDestacada.data.icono}</div>
+				)}
 				<div class="news-body">
 					<a href={`${base}/noticias/${noticiaDestacada.id}`} class="news-card-archive">
 						<span class="tag">{noticiaDestacada.data.tipo}</span>
@@ -66,7 +70,11 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 			<div class="news-sidebar">
 				{restoNoticias.map(noticia => (
 					<article class="news-card-mini">
-						<div class="news-mini-icon">{noticia.data.icono}</div>
+						{noticia.data.imagen ? (
+							<img src={noticia.data.imagen} alt={noticia.data.title} class="news-mini-img" />
+						) : (
+							<div class="news-mini-icon">{noticia.data.icono}</div>
+						)}
 						<div class="news-mini-content">
 							<a href={`${base}/noticias/${noticia.id}`} class="news-card-archive">
 								<span class="tag-sm">{noticia.data.tipo}</span>
