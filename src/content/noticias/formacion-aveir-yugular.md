@@ -4,7 +4,7 @@ fecha: 2026-05-06
 resumen: "La unidad se consolida como referente en el acceso yugular para dispositivos sin cables con una jornada de formación especializada."
 tipo: "Formación"
 icono: "🔋"
-imagen: "/electrofisiologia-web/aveirformacion1.png"
+imagen: "/aveirformacion1.png"
 ---
 
 El pasado 6 de mayo de 2026, nuestra Unidad de Electrofisiología llevó a cabo una jornada intensiva de formación técnica centrada en el **implante de marcapasos sin cables AVEIR**.
