@@ -6,21 +6,9 @@
     "resumen": "Explicación de la Fundación Española del Corazón sobre la FA, síntomas y tratamientos."
   },
   {
-    "url": "https://www.youtube.com/embed/4iJW_slJyAI?si=BtfB4mhdj0R3vGSD",
-    "tipo": "Enfermedad",
-    "titulo": "Entendiendo la Fibrilación Auricular",
-    "resumen": "Vídeo detallado sobre los mecanismos de la arritmia y el riesgo de ictus."
-  },
-  {
-    "url": "https://player.vimeo.com/video/411870028?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-    "tipo": "Enfermedad",
-    "titulo": "Flutter auricular: síntomas y diagnóstico",
-    "resumen": "Diferencias entre flutter y fibrilación auricular y cómo se diagnostica con el ECG."
-  },
-  {
-    "url": "https://www.youtube.com/embed/5aJKKgSEUnc",
-    "tipo": "Procedimiento",
-    "titulo": "Ablación con catéter: en qué consiste",
-    "resumen": "Qué se siente durante la ablación y cómo es la recuperación posterior."
+    "url": "https://www.youtube.com/embed/TBlRoCINvr4?si=wwKTJKWMQNeZd8eM",
+    "tipo": "Tratamiento",
+    "titulo": "Marcapasos",
+    "resumen": "Explicaión de la Fundación Española del Corazón sobre que es un marcapasos."
   }
 ]
