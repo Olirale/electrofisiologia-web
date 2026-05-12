@@ -13,8 +13,8 @@ const sortedPosts = posts.sort((a, b) =>
 	new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
 );
 
-const noticiaDestacada = posts[0];
-const restoNoticias = posts.slice(1, 3);
+const noticiaDestacada = sortedPosts[0];
+const restoNoticias = sortedPosts.slice(1, 3);
 
 import videos from '../data/videos.json';
 import equipo from '../data/equipo.json';
