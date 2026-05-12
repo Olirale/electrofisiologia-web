@@ -1,6 +1,6 @@
 ---
 title: "Formación en Implante de DAI Resincronizador"
-fecha: 2025-03-12
+fecha: 2026/05/12
 resumen: "Curso de formación en implante de DAI resincronizador celebrado los días 11 y 12 de marzo de 2025, promovido por Abbott e impartido por los Dres. Ricoy, Garrido y Fernández de Aspe."
 tipo: "Formación"
 icono: "🫀"
