@@ -1,5 +1,5 @@
 ---
-title: "Primer Implante con el Catéter de Ablación por Campo Pulsado Sphere-360™"
+title: "Primer procedimiento con el Catéter de Ablación por Campo Pulsado Sphere-360™"
 fecha: 2026-07-02
 resumen: "La Unidad de Electrofisiología del CHUAC realiza con éxito su primer caso clínico con el catéter Sphere-360™ de Medtronic, la tecnología más avanzada en ablación por campo pulsado para la fibrilación auricular paroxística."
 tipo: "Hito Clínico"
