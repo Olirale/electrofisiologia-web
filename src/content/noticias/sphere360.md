@@ -9,7 +9,7 @@ imagen: "/electrofisiologia-web/sphere360.jpg"
 
 La Unidad de Electrofisiología del Complejo Hospitalario Universitario de A Coruña (CHUAC) ha incorporado a su práctica clínica el **catéter de ablación por campo pulsado Sphere-360™ de Medtronic**, realizando con éxito su **primer procedimiento** con esta tecnología de última generación.
 
-El Sphere-360™ representa un avance significativo en el tratamiento de la **fibrilación auricular paroxística**, al combinar la eficacia de la ablación por campo pulsado (*pulsed field ablation*) con un diseño de aplicación única (*single shot*) que permite tratar las venas pulmonares de forma precisa y selectiva, minimizando el daño al tejido circundante.
+El Sphere-360™ representa un avance significativo en el tratamiento de la **fibrilación auricular paroxística**, al combinar la eficacia de la ablación por campo pulsado con un diseño de aplicación única  que permite tratar las venas pulmonares de forma precisa y selectiva, minimizando el daño al tejido circundante.
 
 Este hito consolida a nuestra unidad como centro de referencia en la adopción de tecnologías innovadoras en electrofisiología, en línea con nuestro compromiso permanente con la excelencia clínica y la seguridad del paciente.
 
