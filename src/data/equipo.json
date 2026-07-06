@@ -29,14 +29,8 @@
     "resumen": "Experto en Electrofisiología y Estimulación cardíaca.",
     "imagen": "jorge.png"
   },
-  {
-    "nombre": "Eva",
-    "puesto": "Enfermera",
-    "resumen": "Más de 6 años de experiencia en la unidad.",
-    "imagen": "eva.png"
-  },
-  {
-    "nombre": "Teresa",
+   {
+    "nombre": "Tere Galeiras",
     "puesto": "TCAE",
     "resumen": "Personal técnico en cuidados auxiliares de enfermería.",
     "imagen": "tere.jpg"
@@ -56,7 +50,7 @@
   {
     "nombre": "Alejandro Sánchez",
     "puesto": "Enfermero",
-    "resumen": "Desarrollo y mantenimiento de plataforma digital.",
+    "resumen": "Experto en cuidados de enfermería en arritmias.",
     "imagen": "alex.png"
   },
   {
