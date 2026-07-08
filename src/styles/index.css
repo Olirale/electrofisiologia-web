@@ -1,4 +1,4 @@
-/* HERO SECTION */
+/* TION */
 .hero {
     background: linear-gradient(135deg, var(--navy) 0%, var(--ocean) 100%);
     color: white;
@@ -314,4 +314,6 @@
     .news-layout, .contact-wrapper { grid-template-columns: 1fr; }
     .hero-title { font-size: 2.8rem; color: white; }
     .contact-wrapper { gap: 3rem; }
+    .contact-form { text-align: center; padding: 1.5rem; }
+    .contact-form a.btn-primary { display: block; text-align: center; }
 }
