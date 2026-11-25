@@ -195,7 +195,8 @@
 
 .video-card:hover { background: rgba(255,255,255,0.1); }
 
-.video-thumb iframe { width: 100%; aspect-ratio: 16/9; }
+.video-thumb iframe,
+.video-thumb video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; border: 0; }
 .video-info { padding: 1.5rem; }
 .video-info h4 { color: white; margin: 0.5rem 0; font-size: 1.1rem; }
 .tag-video { color: var(--accent); font-size: 0.75rem; font-weight: 600; }
