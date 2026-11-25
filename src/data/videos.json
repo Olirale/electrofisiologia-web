@@ -1,14 +1,44 @@
 [
   {
-    "url": "https://www.youtube.com/embed/fzTaan9HA1c?si=BVL7k7_0sDPrNnh_",
-    "tipo": "Enfermedad",
-    "titulo": "Fibrilación auricular: qué es y cómo afecta",
-    "resumen": "Explicación de la Fundación Española del Corazón sobre la FA, síntomas y tratamientos."
+    "archivo": "videos/ablacion-fa.mp4",
+    "poster": "videos/ablacion-fa.jpg",
+    "tipo": "Tratamiento",
+    "titulo": "La ablación de la fibrilación auricular",
+    "resumen": "Qué es la FA y cómo se realiza el aislamiento de las venas pulmonares en nuestra unidad."
   },
   {
-    "url": "https://www.youtube.com/embed/TBlRoCINvr4?si=wwKTJKWMQNeZd8eM",
+    "archivo": "videos/marcapasos-sin-electrodos.mp4",
+    "poster": "videos/marcapasos-sin-electrodos.jpg",
     "tipo": "Tratamiento",
-    "titulo": "Marcapasos",
-    "resumen": "Explicaión de la Fundación Española del Corazón sobre que es un marcapasos."
+    "titulo": "El marcapasos sin electrodos",
+    "resumen": "Micra y Aveir: qué son, cómo se fijan y cómo se implantan por vena femoral o yugular."
+  },
+  {
+    "archivo": "videos/marcapasos-bicameral-rama-izquierda.mp4",
+    "poster": "videos/marcapasos-bicameral-rama-izquierda.jpg",
+    "tipo": "Tratamiento",
+    "titulo": "Marcapasos bicameral y estimulación de rama izquierda",
+    "resumen": "Cómo es el implante de un marcapasos con electrodos y por qué estimulamos el área de la rama izquierda."
+  },
+  {
+    "archivo": "videos/cuidados-tras-implante-marcapasos.mp4",
+    "poster": "videos/cuidados-tras-implante-marcapasos.jpg",
+    "tipo": "Cuidados",
+    "titulo": "Cuidados tras el implante de un marcapasos",
+    "resumen": "Reposo, apósito, higiene de la herida, retirada de grapas, signos de alarma e interferencias."
+  },
+  {
+    "archivo": "videos/dai.mp4",
+    "poster": "videos/dai.jpg",
+    "tipo": "Tratamiento",
+    "titulo": "El desfibrilador automático implantable (DAI)",
+    "resumen": "DAI endovenoso y bicameral, subcutáneo y extravascular: cómo funcionan y en qué se diferencian."
+  },
+  {
+    "archivo": "videos/monitorizacion-remota.mp4",
+    "poster": "videos/monitorizacion-remota.jpg",
+    "tipo": "Seguimiento",
+    "titulo": "Monitorización remota de su dispositivo",
+    "resumen": "Cómo se envían los datos de su marcapasos o DAI desde casa y qué debe hacer usted."
   }
 ]
