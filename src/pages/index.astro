@@ -92,38 +92,6 @@ const imagenes = import.meta.glob<{ default: ImageMetadata }>(
 		</div>
 	</section>
 
-	<section id="casos" class="bg-offwhite">
-		<div class="container">
-			<div class="section-header">
-				<span class="section-eyebrow">Área Docente</span>
-				<h2 class="section-title">Casos Clínicos</h2>
-				<div class="gold-line"></div>
-			</div>
-
-			<section class="casos-grid">
-				{casosHome.map(caso => (
-					<article class="caso-card">
-						<div class="caso-header">
-							<span class="caso-icon">{caso.data.icono}</span>
-							<span class="caso-number">#{caso.data.numero}</span>
-						</div>
-						<div class="caso-body">
-							<span class="caso-type">{caso.data.tipo}</span>
-							<h3>{caso.data.title}</h3>
-							<p>{caso.data.resumen}</p>
-						</div>
-						<div class="caso-footer">
-							<a href={`${base}/casos/${caso.id}`} class="btn-text">Ver detalles del caso</a>
-						</div>
-					</article>
-				))}
-			</section>
-			<div class="center-link">
-				<a href={`${base}/fellowship/`} class="btn-primary">Ver Programa Completo</a>
-			</div>
-		</div>
-	</section>
-
 	<section id="fellowship" class="container">
 		<div class="section-header">
 			<span class="section-eyebrow">Formación Avanzada</span>
