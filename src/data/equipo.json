@@ -57,7 +57,7 @@
     "nombre": "Mar Mosteiro",
     "puesto": "Enfermera",
     "resumen": "Experta en cuidados de enfermería en arritmias.",
-    "imagen": "mar.png"
+    "imagen": "mar.jpg"
   },
   {
     "nombre": "Joana de Sousa",
@@ -69,6 +69,6 @@
     "nombre": "Beatriz Varela",
     "puesto": "Enfermera",
     "resumen": "Experta en cuidados de enfermería en arritmias.",
-    "imagen": "bea.png"
+    "imagen": "bea.jpg"
   }
 ]
